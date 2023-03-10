@@ -1093,7 +1093,7 @@ mqtt:
   sensor:
     - platform: command_line
       name: "Tasmota (latest version)"
-      command: 'curl -s https://api.github.com/repos/arendst/Tasmota/tags | grep "name" | sort --version-sort -r | head -n 1 | sed -E "s/\s*\"name\": \"(.*)\",*/\1/g"'
+      command: 'curl -s https://api.github.com/repos/arendst/Tasmota/tags | grep "name" | head -n 1 | sed -E "s/\s*\"name\": \"(.*)\",*/\1/g"'
       scan_interval: 86400 # check once every day
 ```
 
